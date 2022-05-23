@@ -1,8 +1,11 @@
 package it.polito.tdp.librettovoti.model;
 
+import java.time.LocalDate;
+
 public class Voto {
 	private String nome ;
 	private int punti ;
+	private LocalDate data;
 	
 	public Voto(String nome, int punti) {
 		super();
@@ -25,6 +28,14 @@ public class Voto {
 	@Override
 	public String toString() {
 		return nome+" : "+ punti;
+	}
+	
+	
+	public LocalDate getData() {
+		return data;
+	}
+	public void setData(LocalDate data) {
+		this.data = data;
 	}
 	@Override
 	public int hashCode() {
